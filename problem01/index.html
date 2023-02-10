@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Two Sum</title>
+</head>
+
+<body>
+    <h1>Two Sum</h1>
+    <script>
+        /**
+         * @param {number[]} nums
+         * @param {number} target
+         * @return {number[]}
+         */
+        var twoSum = function (nums, target) {
+            const result = [];
+            const dict = {};
+            for (let i = 0; i < nums.length; i++) {
+                let index = target - nums[i];
+                if (index in dict && i != dict[index]) {
+                    result[0] = dict[index];
+                    result[1] = i;
+                    break;
+                }
+                else {
+                    dict[nums[i]] = i;
+                }
+            }
+            return result;
+        };
+
+        const nums = [-10, 7, 19, 15];
+        const target = 9;
+
+        const result = twoSum(nums, target);
+
+        result.forEach(x => console.log(x));
+    </script>
+</body>
+
+</html>
