@@ -2,3 +2,5 @@ problem01/twoSum
 problem01/.vscode/tasks.json
 problem01/twoSum.dSYM/Contents/Info.plist
 problem01/twoSum.dSYM/Contents/Resources/DWARF/twoSum
+problem01/TwoSum.CSharp/obj/*
+problem01/TwoSum.CSharp/bin/*
